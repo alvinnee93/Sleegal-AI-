@@ -1,22 +1,3 @@
 # Sleegal-AI-
 
-Summary of the Analysis
-
-I analysed the trips records (2014-Q4 trips) based on the following logic:
-
-For each station:
-    For each date:
-      -  I begin with bikes-stock=capacity (We considered that each midnight, the stock of bikes at each station is fully refreshed to the default capacity)
-      -  All trips (both departures and arrivals) are taked in consideration in time order
-      -  Each trip that starts from that station reduces stock by 1
-      -  Each trip that arrives to that station increases stock by 1
-      -  For each date, we save the minimum and maximum of stock
-    For this specific station, we get the minimum and maximum of all dates
-
-Result is given to 'result.xlsx' excel file
-
-Conclusion:
-I can consider that stations that have reached a negative stock at any time, could be considered for an increase of their capacity in the future (question 1 of test). The lower the number, the biggest the neccessity
-
-Similarly, the stations with high 'minimum' stock in time, can be considered that they have more than enough bike docks (question 2 of test)
 
